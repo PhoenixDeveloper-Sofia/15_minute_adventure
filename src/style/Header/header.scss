@@ -1,0 +1,16 @@
+.header {
+    width: 100dvw;
+}
+
+.submenu {
+    width: 100%;
+    @include flex-b ($ai:start);
+    padding: 5px 190px 20px 25px;
+    background: $background-gradient;
+    height: 100px;
+
+    &__filter{
+     @include flex-c ($ai:start);
+     gap: 20px;
+    }
+}

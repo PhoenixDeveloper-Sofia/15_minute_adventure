@@ -1,0 +1,11 @@
+.projects{
+    padding: 30px 40px;
+    display: flex;
+    gap: 40px;
+}
+.map{
+    @include flex-c;
+    @include width-mw(700px);
+    border-radius: 10px;
+    background: #fff;
+}

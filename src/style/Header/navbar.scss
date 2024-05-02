@@ -1,0 +1,20 @@
+.menu {
+    background-color: $nav-bg;
+    display: flex;
+    gap: 5px;
+    padding-left: 15px;
+
+    &__item {
+        padding: 10px 13px 5px 13px;
+        color: $light;
+
+        &__activ {
+            background-color: black;
+            border-bottom: 4px solid $nav-activ-bg;
+        }
+
+        &:hover{
+            border-bottom: 4px solid $font-filter-color;
+        }
+    }
+}

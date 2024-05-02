@@ -1,0 +1,29 @@
+.payment{
+    padding: 30px 40px;
+   @include flex ($jc:space-between , $al: start);
+    gap: 40px;
+}
+
+.paymentSchedule{
+    min-width: 30%;
+    position: sticky;
+    top: 0;
+}
+.schedule{
+    position: relative;
+
+    &__countProject{
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        bottom: 48%;
+        right: 0;
+        text-align: center;
+        font-size: 24px;
+    }
+}
+
+.schedule .recharts-responsive-container{
+    height: 650px !important;
+}

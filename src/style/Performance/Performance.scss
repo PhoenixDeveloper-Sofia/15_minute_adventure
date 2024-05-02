@@ -1,0 +1,19 @@
+.performance {
+    padding: 30px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 40px;
+
+}
+
+.performanceSchedule {
+    height: 750px;
+    width: 100%;
+
+    &__title{
+        font-size: 20px;
+        padding-left: 40px;
+    }
+}
+

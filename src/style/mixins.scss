@@ -1,0 +1,22 @@
+@mixin width-mw ($mw:1600px){
+    width: 100%;
+    max-width: $mw;
+}
+
+@mixin flex-c ($ai:center) {
+    display: flex;
+    align-items: $ai;
+    justify-content: center;
+}
+
+@mixin flex($jc:flex-start, $al: center){
+    display: flex;
+    justify-content:$jc;
+    align-items: $al;
+}
+
+@mixin flex-b ($ai:center) {
+    display: flex;
+    align-items: $ai;
+    justify-content: space-between;
+}

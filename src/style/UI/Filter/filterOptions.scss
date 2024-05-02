@@ -1,0 +1,65 @@
+.filterOptions {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    background-color: #fff;
+    padding: 6px;
+    z-index: 3;
+
+    &__header {
+        font-size: 12px;
+        border-bottom: 1px solid $light;
+        padding-bottom: 6px;
+    }
+
+    &__subheader {
+        width: 200px;
+        padding-top: 10px;
+        @include flex-b;
+    }
+
+    &__main {
+       height: 200px;
+
+        padding: 5px 8px;
+        overflow-y: auto;
+    }
+
+    &__item {
+
+        padding-top: 10px;
+    }
+    &__footer {
+        border-top: 1px solid $light;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 15px;
+        padding: 6px 2px;
+    }
+    &__button{
+        color: $font-filter-color;
+
+        &:hover{
+            color: $nav-bg;
+        }
+    }
+    &__button-color{
+        background-color: $font-filter-color;
+        color: #fff;
+        padding: 6px 5px;
+
+        &:hover{
+            background-color: $nav-bg;
+        }
+    }
+}
+
+.subheader__button {
+    color: $font-filter-color;
+    font-size: 12px;
+    width: 40px;
+
+    &:hover{
+        color: $nav-bg;
+    }
+}

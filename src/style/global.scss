@@ -1,0 +1,31 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+@import "./reset.scss";
+
+@import "./UI/Logo/logoUI.scss";
+
+@import "./UI/Filter/filter.scss";
+@import './UI/Filter/filterOptions.scss';
+
+@import "./UI/checkbox/checkboxUI.scss";
+
+@import "./UI/table/tableUI.scss";
+
+@import "./UI/legend/RenderLegend.scss";
+
+@import './Header/header.scss';
+@import "./Header/navbar.scss";
+
+@import "./Project/project.scss";
+
+@import "./Payment/Payment.scss";
+@import "./Payment/PaymentTable.scss";
+
+@import "./Performance/Performance.scss";
+@import "./Performance/tooltip/CustomTooltip.scss";
+
+.wrapper {
+    height: 100dvh;
+    display: flex;
+    justify-items: center;
+}

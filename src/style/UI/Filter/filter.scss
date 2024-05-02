@@ -1,0 +1,28 @@
+.filter {
+    padding-top: 10px;
+    z-index: 3;
+
+    &__text{
+        padding-bottom: 4px;
+    }
+
+    &__box{
+        width: 260px;
+        
+        &[open]{
+            background: $average;
+        }
+    }
+
+    &__summary-title {
+        @include flex-b;
+        padding: 8px 12px;
+        border: 2px solid $light;
+        border-radius: 3px;
+
+        &:hover{
+            background: $average;
+        }
+    }
+
+}
