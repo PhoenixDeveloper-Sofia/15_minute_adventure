@@ -3,6 +3,9 @@
     border-radius: 3px;
     border: 2px solid $light;
     box-shadow: 4px 0 7px 4px rgba(0, 0, 0, 0.25);
+    max-height: 81dvh;
+    overflow-y: auto;
+    position: relative;
 
     h1 {
         padding: 10px 2px;
@@ -11,6 +14,7 @@
     &__table {
         text-align: center;
         border-collapse: collapse;
+        padding-right: 5px;
 
         td,
         th {
@@ -30,6 +34,10 @@
 .paymentTable__pagination {
     background: $light;
     @include flex-b;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .button_inner {
@@ -42,14 +50,14 @@
         font-size: 14px;
         border-radius: 3px;
 
-        &:hover{
-           color: $nav-activ-bg;
+        &:hover {
+            color: $nav-activ-bg;
         }
 
-       
+
     }
 }
 
-.active{
+.active {
     background: $basic;
 }

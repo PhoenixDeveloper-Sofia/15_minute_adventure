@@ -1,13 +1,24 @@
 import CheckboxUI from '../checkbox/CheckboxUI'
 import SelectedValues from '../../../img/header/SelectedValues.svg'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { clearFilterFinance, getDataFilterFinance } from '../../../store/redecers/financeReducer';
 import { clearProject, getDataProjectFilter__Area, getDataProjectFilter__Completion_date } from '../../../store/redecers/projectReducer';
 import { useEffect, useRef, useState } from 'react';
 const FilterOptions = ({ options, getCount, close }) => {
+    const areaFilter = useSelector(state => state.area)
+
     useEffect(() => cancel(), [close])
     const dispatch = useDispatch()
     const toggleFilter = useRef([])
+
+    useEffect(() => {
+        if (areaFilter.length !== 0 && toggleFilter.current[0] != areaFilter[0]) {
+            toggleFilter.current = []
+        }
+        console.log( "err")
+    }, [areaFilter])
+
+
     const [isChecked, setIsChecked] = useState({ checked: false });
     const handleChange = (newFilter) => {
         const isExists = toggleFilter.current.some(item => item === newFilter)
@@ -17,6 +28,12 @@ const FilterOptions = ({ options, getCount, close }) => {
         else {
             toggleFilter.current.push(newFilter)
         }
+        
+        if (areaFilter.length !== 0 && toggleFilter.current[0] == areaFilter[0] && areaFilter[0] == newFilter ) {
+            filterData()
+        }
+
+        console.log( toggleFilter.current)
     }
 
     const countSub = (length) => {
@@ -25,7 +42,7 @@ const FilterOptions = ({ options, getCount, close }) => {
 
     const filterData = () => {
         if (toggleFilter.current.length === 0) {
-            if( typeof options[0] === "number"){
+            if (typeof options[0] === "number") {
                 dispatch(clearProject("date"))
             }
             else {
@@ -64,13 +81,14 @@ const FilterOptions = ({ options, getCount, close }) => {
 
 
 
+
     return (
         <div className='filterOptions'>
             <header className='filterOptions__header'>
                 <button>Выбранные значения <img src={SelectedValues} alt="SelectedValues" /></button>
                 <div className="filterOptions__subheader">
-                    <button className='subheader__button' onClick={() => { setIsChecked({ checked: true });  toggleFilter.current = options.map(item => item.toString())}}>ВЫБРАТЬ ОТОБРАЖАЕМЫЕ</button>
-                    <button className='subheader__button' onClick={() => { setIsChecked({ checked: false }); toggleFilter.current = [] ; }}>СНЯТЬ ВЫДЕЛЕНИЕ</button>
+                    <button className='subheader__button' onClick={() => { setIsChecked({ checked: true }); toggleFilter.current = options.map(item => item.toString()) }}>ВЫБРАТЬ ОТОБРАЖАЕМЫЕ</button>
+                    <button className='subheader__button' onClick={() => { setIsChecked({ checked: false }); toggleFilter.current = []; }}>СНЯТЬ ВЫДЕЛЕНИЕ</button>
                 </div>
             </header>
             <main className='filterOptions__main'>

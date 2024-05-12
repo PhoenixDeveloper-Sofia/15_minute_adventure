@@ -6,7 +6,7 @@ const PerformanceTable = () => {
     const financial =  useSelector((state) => state.finance)
     const header = ['MP/ГО','Финансовая сторона стоимость, руб. ','Сумма заключенныхных контрактов в/ договоров, руб','Кассовое исполнение, руб','Уровень контрактиции', 'Уровень кассового исполнения, %']
     return (
-        <section>
+        <section className='performanceTable'>
             <TableUI header={header} opcions={financial}/>
         </section>
     );
