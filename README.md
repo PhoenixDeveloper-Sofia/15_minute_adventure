@@ -1,8 +1,19 @@
-# React + Vite
+# Standart one
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Это небольшой учебный проект, на время прохождения практики. Основной целью данного проекта было получить практический опыт работы с библиотекой Recharts для создания графиков.
 
-Currently, two official plugins are available:
+Стек проекта:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+В проекте использованы следующие технологии:
+
+Redux Toolkit
+React
+React-DOM
+React-Redux
+React-Router-DOM
+React-Select
+Recharts
+Sass
+
+
+P.S. Если в проекте вы обнаружите функции, которые не работают (например, кнопка есть, но ответа нет), это не означает, что проект сломан. Основной задачей было сверстать весь интерфейс по макету, а реализация всех функций была необязательной (времени было мало, работали над графиками).
